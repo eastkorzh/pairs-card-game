@@ -5,6 +5,7 @@ $text-general-color: rgba(0, 0, 0, 0.48);
 $custom-blue: rgba(38, 184, 242, 1);
 $living-coral: rgba(255, 112, 96, 1);
 $body-background: rgb(247, 247, 247);
+$template-widt: minmax(300px, 430px);
 
 * {
     margin: 0;
@@ -29,30 +30,32 @@ body {
     grid-template-columns: 1fr 250px;
 }
 
-.board-wrapper {
-    display: flex;
-    width: 100%;
+.board-wrapper-x4 {
+    display: grid;
+    grid-template: 1fr auto 1fr / 1fr $template-widt 1fr ;
     height: 100vh;
-    justify-content: center;
-    align-items: center;
-    
+}
+.board-wrapper-x6 {
+    display: grid;
+    grid-template: 1fr auto 1fr / 1fr minmax(300px, 650px) 1fr ;
+    height: 100vh;
 }
     .board {
         display: grid;
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-gap: 10px;
-        height: 430px;
-        width: 430px;
+        height: 1fr;
+        width: 1fr;
     }
     .x6 {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        $template-widt: minmax(300px, 650px);
     }
         .card {
-            // width: 100px;
-            // height: 100px;
-            // justify-self: stretch;
             border-radius: 10px;
             background: $living-coral;
             -webkit-box-shadow: 0px 0px 18px 4px rgba(255, 112, 96, 0.4);
@@ -122,7 +125,5 @@ button {
 }
 
 @media screen and (max-width: 920px) {
-    body {
-        background-color: rgb(94, 94, 94);
-    }
+    
 }

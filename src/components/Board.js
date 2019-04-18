@@ -1,5 +1,10 @@
 import React from 'react'
 
+setInterval(() => {
+	const board = document.getElementById('board');
+	board.style.height = board.clientWidth + 'px';
+}, 500)
+
 function Card(props) {
 	return (
 		<div
@@ -95,8 +100,10 @@ class Board extends React.Component {
 	
 	render() {
 		return (
-			<div className={`board ${this.props.mode}`} id="board">     
-				{this.renderBoard()}				
+			<div className={`board-wrapper-${this.props.mode}`}>
+				<div className={`board ${this.props.mode}`} id="board">     
+					{this.renderBoard()}				
+				</div>
 			</div>
 		)
 	}

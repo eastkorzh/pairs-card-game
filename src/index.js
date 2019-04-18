@@ -134,7 +134,7 @@ class Game extends React.Component {
 	render() {
 		return (	
 			<div className="content">
-				<div className = "board-wrapper">
+				
 					<Board 
 						status = {this.state.status}
 						picked = {this.state.picked}
@@ -143,7 +143,7 @@ class Game extends React.Component {
 						createImgsArr = {this.createImgsArr}
 						mode = {this.state.mode}
 					/>
-				</div>
+
 				<div className = "interface-wrapper">
 					<div className = "interface">
 						<ControlButton 
