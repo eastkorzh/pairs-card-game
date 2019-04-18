@@ -12,6 +12,14 @@ class ChangeMode extends React.Component {
 					<label htmlFor="x4">4x4</label>
 				</div>
 				<div className = "md-radio">
+					{/* пропсы, если их много, нужно писать так:
+						<A
+							abc={//}
+							def={//}
+						>
+						///
+						</A>
+					*/}
 					<input type="radio" id="x6" name="mode" value="x6" 
 						onChange = {this.props.changeMode}
 						

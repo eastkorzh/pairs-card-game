@@ -16,7 +16,7 @@ class Game extends React.Component {
 			timeLog4: [],
 			timeLog6: [],
 		}
-		this.startMs = null;
+		this.startMs = null; // так не делают, но пока без redux - можно и так, наверное. У реактовских компонентов не делают никаких полей, только методы свои определяют (ведь есть state и store от редакса)
 		this.s = null;
 		this.m = null;
 
@@ -105,7 +105,7 @@ class Game extends React.Component {
 
 	changeMode() {
 		this.stopGame();
-		(this.state.mode === 'x4') ? 
+		(this.state.mode === 'x4') ? // скобки можно убрать
 			this.setState({mode: 'x6'}) :
 			this.setState({mode: 'x4'})
 	}
@@ -121,6 +121,11 @@ class Game extends React.Component {
 
 		imgs.push(...imgs);
 
+		/* 
+		видимо это шаффл массива - стоит его вынести в отдельное место и импортить как утилитарный метод, 
+		либо же, если в этом файле оставлять, сделать константой на глобальном уровне (с экспортом) 
+		- иначе точно не понятно, что эта фигня делает
+	*/
 		((arr) => {
 			for (let i = arr.length - 1; i > 0; i--) {
 				const j = Math.floor(Math.random() * (i + 1));
@@ -145,7 +150,11 @@ class Game extends React.Component {
 					/>
 				</div>
 				<div className = "interface-wrapper">
-					<div className = "interface">
+					<div className = "interface"> 
+					{/*
+						при рендере в указани пропсов никогда не ставят пробелы;
+						но это всё решится вместе с другими стилистическими проблемами, когда ты линтер поставишь
+					*/}
 						<ControlButton 
 							startGame = {this.startGame}
 							stopGame = {this.stopGame}

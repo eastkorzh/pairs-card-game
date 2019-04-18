@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Card(props) {
+function Card(props) { // Это отдельный компонент, поэтому его стоит в отдельный файл хотя бы выносить, если не в директорию
 	return (
 		<div
 			className = {`card ${props.class}`}
@@ -77,7 +77,7 @@ class Board extends React.Component {
 						id={this.imgs[i]}
 					/>;
 			} else if (this.props.status === 'preparation'){
-				return <Card 
+				return <Card // Лучше оборачивать в таких случаях, вроде бы: return (<A ... >...</A>) 
 						key = {i} 
 						class={this.imgs[i]} 
 						id={this.imgs[i]}
@@ -102,4 +102,4 @@ class Board extends React.Component {
 	}
 }
 
-export default Board;
+export default Board; // Можно писать сразу export default class A extends React.Component ...
