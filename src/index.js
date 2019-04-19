@@ -134,7 +134,24 @@ class Game extends React.Component {
 	render() {
 		return (	
 			<div className="content">
+				<div className = "hello" hidden>
+					<h1>Scroll down to start a game</h1>
+				</div>
+				<div className = "m-mode-radio" hidden>
+					<p>Change template size</p>
+					<ChangeMode 
+						changeMode = {this.changeMode}
+					/>
+				</div>
 				<div className = "board-wrapper">
+					<div className = "m-button" hidden>
+						<ControlButton 
+							startGame = {this.startGame}
+							stopGame = {this.stopGame}
+							status = {this.state.status}
+							timer = {this.state.timer}
+						/>
+					</div>
 					<Board 
 						status = {this.state.status}
 						picked = {this.state.picked}
@@ -143,6 +160,13 @@ class Game extends React.Component {
 						createImgsArr = {this.createImgsArr}
 						mode = {this.state.mode}
 					/>
+					<div className = "m-time-log" hidden>
+						<TimeLog
+							timeLog4 = {this.state.timeLog4}
+							timeLog6 = {this.state.timeLog6}
+							mode = {this.state.mode}
+						/>
+					</div>
 				</div>
 				<div className = "interface-wrapper">
 					<div className = "interface">

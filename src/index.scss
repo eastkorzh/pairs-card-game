@@ -31,16 +31,17 @@ body {
 }
 
 .board-wrapper{
-    display: grid;
+    display: flex;
     height: 100vh;
-    //justify-content: center;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
     .board {
         display: grid;
         grid-template: repeat(4, minmax(50px, 100px)) / repeat(4, minmax(50px, 100px));
         grid-gap: 10px;
-        padding: 10px;
+        margin: 0 10px;
     }
     .x6 {
         grid-template: repeat(6, minmax(50px, 100px)) / repeat(6, minmax(50px, 100px));
@@ -114,11 +115,41 @@ button {
     }
 }
 
+
 @media screen and (max-width: 920px) {
     .interface-wrapper {
         display: none;
     }
     .content {
         grid-template-columns: 1fr;
+    }
+    .board-wrapper{
+        height: 100vh;
+        align-items: center;
+        flex-direction: column;
+    }
+    .hello {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 10px;
+    }
+    .m-mode-radio {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .m-button {
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+    .m-time-log {
+        display: flex;
+        height: 100%;
+        padding-top: 20px;
     }
 }
