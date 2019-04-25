@@ -1,14 +1,14 @@
 {
-  "main.css": "/static/css/main.196a7453.chunk.css",
-  "main.js": "/static/js/main.441bb335.chunk.js",
-  "main.js.map": "/static/js/main.441bb335.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-  "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-  "static/js/2.0f58faaa.chunk.js": "/static/js/2.0f58faaa.chunk.js",
-  "static/js/2.0f58faaa.chunk.js.map": "/static/js/2.0f58faaa.chunk.js.map",
-  "index.html": "/index.html",
-  "precache-manifest.78772b020b1eb3d2b0bf9bdc7c924658.js": "/precache-manifest.78772b020b1eb3d2b0bf9bdc7c924658.js",
-  "service-worker.js": "/service-worker.js",
-  "static/css/main.196a7453.chunk.css.map": "/static/css/main.196a7453.chunk.css.map",
-  "static/media/index.scss": "/static/media/9.d5b19046.jpg"
+  "main.css": "/pairs-card-game/static/css/main.ca78819a.chunk.css",
+  "main.js": "/pairs-card-game/static/js/main.441bb335.chunk.js",
+  "main.js.map": "/pairs-card-game/static/js/main.441bb335.chunk.js.map",
+  "runtime~main.js": "/pairs-card-game/static/js/runtime~main.7562c35f.js",
+  "runtime~main.js.map": "/pairs-card-game/static/js/runtime~main.7562c35f.js.map",
+  "static/js/2.0f58faaa.chunk.js": "/pairs-card-game/static/js/2.0f58faaa.chunk.js",
+  "static/js/2.0f58faaa.chunk.js.map": "/pairs-card-game/static/js/2.0f58faaa.chunk.js.map",
+  "index.html": "/pairs-card-game/index.html",
+  "precache-manifest.8dca5608915a412b1669cb5dae4d2715.js": "/pairs-card-game/precache-manifest.8dca5608915a412b1669cb5dae4d2715.js",
+  "service-worker.js": "/pairs-card-game/service-worker.js",
+  "static/css/main.ca78819a.chunk.css.map": "/pairs-card-game/static/css/main.ca78819a.chunk.css.map",
+  "static/media/index.scss": "/pairs-card-game/static/media/9.d5b19046.jpg"
 }
